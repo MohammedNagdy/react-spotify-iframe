@@ -1,0 +1,47 @@
+{
+  "name": "react-spotify-iframe",
+  "version": "1.0.0",
+  "description": "lightweight library for Spotify iframe interactions",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "test": "test",
+    "build-storybook": "storybook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-MohammedNagdy:MohammedNagdy/react-spotify-iframe.git"
+  },
+  "keywords": [
+    "spotify",
+    "iframe",
+    "embed",
+    "react",
+    "javacript",
+    "interactions"
+  ],
+  "author": "Mohammed Nagdy",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.10",
+    "@storybook/addon-interactions": "^7.6.10",
+    "@storybook/addon-links": "^7.6.10",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/blocks": "^7.6.10",
+    "@storybook/react": "^7.6.10",
+    "@storybook/react-webpack5": "^7.6.10",
+    "@storybook/test": "^7.6.10",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-use": "^17.5.0",
+    "storybook": "^7.6.10"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
