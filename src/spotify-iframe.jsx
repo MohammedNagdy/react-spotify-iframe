@@ -40,5 +40,5 @@ SpotifyIframe.propTypes = {
     type: PropTypes.string,
     height: PropTypes.string,
     width: PropTypes.string ,
-    onControllerCreate: PropTypes.func,
+    emitController: PropTypes.func,
 }

@@ -26,6 +26,7 @@ export const useSpotifyIframeApiInit = (elementId, width, height) => {
 	useEffect(() => {
 		const script = document.createElement('script');
 		script.id = spotifyScriptElementId;
+		script.setAttribute('data-testid', spotifyScriptElementId);
 		script.src = spotifyScriptUrl;
 		document.body.appendChild(script);
 

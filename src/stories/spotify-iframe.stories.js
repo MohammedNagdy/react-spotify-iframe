@@ -1,8 +1,15 @@
+import { userEvent, within, screen } from '@storybook/testing-library';
+
+import { expect } from '@storybook/jest';
+
+
 import React from 'react';
 import SpotifyIframe from '../spotify-iframe';
+import { spotifyScriptElementId } from '../consts';
 
 
-export const Template = (args) => {
+
+const Template = (args) => {
 	return <SpotifyIframe {...args} />;
 };
 
@@ -30,6 +37,19 @@ AlbumSpotifyIframe.args = {
   height:'100',
   width:'100%',
 };
+
+// Test if the script is loaded in the dom
+export const LoadSpotifyScript = {
+  play:  async ({ canvasElement }) => {
+    
+    const script =  screen.getByTestId(spotifyScriptElementId);
+
+    await expect(
+      script
+    ).toBeInTheDocument();
+  },
+}
+
 
 export default {
 	title: 'SpotifyIframe',

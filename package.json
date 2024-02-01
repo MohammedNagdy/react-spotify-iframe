@@ -6,6 +6,7 @@
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "test": "test-storybook",
+    "unit-test": "react-scripts test --setupFiles ./storybook/setupFilesjs",
     "build-storybook": "storybook build"
   },
   "repository": {
@@ -29,14 +30,16 @@
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.10",
-    "@storybook/addon-interactions": "^7.6.10",
+    "@storybook/addon-interactions": "^7.6.12",
     "@storybook/addon-links": "^7.6.10",
     "@storybook/addon-onboarding": "^1.0.11",
     "@storybook/blocks": "^7.6.10",
+    "@storybook/jest": "^0.2.3",
     "@storybook/react": "^7.6.10",
     "@storybook/react-webpack5": "^7.6.10",
     "@storybook/test": "^7.6.10",
     "@storybook/test-runner": "^0.16.0",
+    "@storybook/testing-library": "^0.2.2",
     "@testing-library/dom": "^9.3.4",
     "prettier": "^3.2.4",
     "prop-types": "^15.8.1",
