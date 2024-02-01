@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 /**
  * Internal dependencies
  */
-import {spotifyScriptUrl} from '../consts'
+import {spotifyScriptElementId, spotifyScriptUrl} from '../consts'
 
 
 /**
@@ -25,6 +25,7 @@ export const useSpotifyIframeApiInit = (elementId, width, height) => {
 	const [controller, setController] = useState(null);
 	useEffect(() => {
 		const script = document.createElement('script');
+		script.id = spotifyScriptElementId;
 		script.src = spotifyScriptUrl;
 		document.body.appendChild(script);
 

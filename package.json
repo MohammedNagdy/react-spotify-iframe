@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "storybook": "storybook dev -p 6006",
-    "test": "test",
+    "test": "test-storybook",
     "build-storybook": "storybook build"
   },
   "repository": {
@@ -36,6 +36,9 @@
     "@storybook/react": "^7.6.10",
     "@storybook/react-webpack5": "^7.6.10",
     "@storybook/test": "^7.6.10",
+    "@storybook/test-runner": "^0.16.0",
+    "@testing-library/dom": "^9.3.4",
+    "prettier": "^3.2.4",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
