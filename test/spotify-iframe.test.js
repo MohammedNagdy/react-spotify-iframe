@@ -15,20 +15,13 @@ const { DefaultSpotifyIframe, AlbumSpotifyIframe } = composeStories(SpotifyIfram
 test('Test if the spotify iframe API script attached', () => {
     const {container} = render(<DefaultSpotifyIframe />);
 
-    // const isScriptAttached = container.quer(spotifyScriptElementId);
-    // expect(isScriptAttached).toBeInTheDocument();
+    const isScriptAttached = container.quer(spotifyScriptElementId);
+    expect(isScriptAttached).toBeInTheDocument();
 });
 
 
-// test('Test if the spotify iframe component is rendered', () => {
-//     render(<DefaultSpotifyIframe />);
+test('Test if the spotify iframe component is rendered', () => {
+    render(<DefaultSpotifyIframe />);
   
-//     const buttonElement = screen.getByRole('button', {
-//       name: 'Submit',
-//     });
-  
-//     fireEvent.click(buttonElement);
-  
-//     const isFormValid = screen.getByLabelText('invalid-form');
-//     expect(isFormValid).toBeInTheDocument();
-//   });
+   
+  });

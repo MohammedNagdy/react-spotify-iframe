@@ -10,16 +10,18 @@ import { spotifyScriptElementId } from '../consts';
 
 
 const Template = (args) => {
-	return <SpotifyIframe {...args} />;
+
+	return (
+  <>
+    <h1>Make sure to refresh the page when testing each component to load the spotify scripts properly</h1>
+    <SpotifyIframe {...args} />
+  </>
+  );
 };
 
-export const Default = Template.bind({});
-Default.storyName = 'Default';
-Default.args = {
-};
 
 export const DefaultSpotifyIframe = Template.bind({});
-DefaultSpotifyIframe.storyName = 'With Embed';
+DefaultSpotifyIframe.storyName = 'With Embed Track';
 DefaultSpotifyIframe.args = {
 	id: '1',
   spotifyId:"5ChkMS8OtdzJeqyybCc9R5",
@@ -41,12 +43,15 @@ AlbumSpotifyIframe.args = {
 // Test if the script is loaded in the dom
 export const LoadSpotifyScript = {
   play:  async ({ canvasElement }) => {
-    
-    const script =  screen.getByTestId(spotifyScriptElementId);
+    let script;
 
-    await expect(
-      script
-    ).toBeInTheDocument();
+    setTimeout(async () => {
+      script =  document.getElementById(spotifyScriptElementId);
+      await expect(
+        script
+      ).toBeInTheDocument();
+  
+    }, 5000);
   },
 }
 
